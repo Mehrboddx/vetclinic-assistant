@@ -1,0 +1,49 @@
+# Look and feel. packaging/build_portable.ps1 copies this file into the portable build,
+# so keep server/browser settings out of it (the build script writes those).
+
+[server]
+enableStaticServing = true  # serves src/ui/static (the bundled Vazirmatn font, works offline)
+
+[[theme.fontFaces]]
+family = "Vazirmatn"
+url = "app/static/Vazirmatn-wght.woff2"
+weight = "100 900"
+style = "normal"
+
+[theme]
+font = "Vazirmatn, sans-serif"
+headingFont = "Vazirmatn, sans-serif"
+headingFontSizes = ["2rem", "1.5rem", "1.2rem", "1.05rem"]
+headingFontWeights = [700, 650, 600, 600]
+baseFontSize = 15
+baseRadius = "0.6rem"
+buttonRadius = "0.5rem"
+showWidgetBorder = true
+showSidebarBorder = true
+metricValueFontSize = "1.6rem"
+metricValueFontWeight = 650
+chartCategoricalColors = ["#2a78d6", "#eb6834", "#1f9e89", "#b4469b", "#8a6d1f"]
+
+[theme.light]
+primaryColor = "#0f766e"
+backgroundColor = "#f6f8f7"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1c2b29"
+borderColor = "#d5dfdc"
+linkColor = "#0f766e"
+
+[theme.light.sidebar]
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#eef4f2"
+
+[theme.dark]
+primaryColor = "#2dd4bf"
+backgroundColor = "#0f1716"
+secondaryBackgroundColor = "#182321"
+textColor = "#e3ecea"
+borderColor = "#2a3936"
+linkColor = "#5eead4"
+
+[theme.dark.sidebar]
+backgroundColor = "#131d1c"
+secondaryBackgroundColor = "#1c2927"
